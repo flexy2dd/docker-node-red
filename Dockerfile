@@ -1,3 +1,5 @@
-FROM nodered/node-red-docker:v8
+FROM nodered/node-red:latest-minimal
 
-CMD ["npm", "start", "--", "--userDir", "/data"]
+USER root
+
+ENTRYPOINT ["npm", "start", "--", "--userDir", "/data"]
